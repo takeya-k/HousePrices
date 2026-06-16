@@ -26,14 +26,23 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 ●　train-R² score：0.9418  
 ●　test-R² score：0.6218  
 
+⓶ Random Forest  
+（評価指標）  
+●　train-R² score：0.9769    
+●　test-R² score：0.8391  
+
+【実行内容】  
+●　モデル比較
+
 ## Kaggle submission
 （提出結果）  
 |Model|Kaggle Score|
 |-|-|
 |Linear Regression|0.46171|
+|Random Forest|0.15197|
 
 ## Results
-Linear Regression modelはKaggle Score 0.46171を示す、予測性能となった。  
+Random Forest modelはLinear Regression modelよりも予測性能が高く、Kaggle Score 0.15197となった。
 
 ## Environment
 Python(pandas / scikit-learn / matplotlib)  
