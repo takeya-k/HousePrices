@@ -34,7 +34,10 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 【実行内容】  
 ●　モデル比較
 
-## Kaggle submission
+## Kaggle submission　　
+※ Evaluation Metric: RMSLE (Root Mean Squared Logarithmic Error)　　
+※ Lower score indicates better performance.
+
 （提出結果）  
 |Model|Kaggle Score|
 |-|-|
