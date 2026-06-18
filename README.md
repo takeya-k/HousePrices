@@ -14,12 +14,12 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 
 ⓷説明変数  
 ●　元データ：79 explanatory variables  
-●　ダミー変数化後：234 features
+●　ダミー変数化後：234 features  
 ●　特徴量エンジニアリング後：238 features
 
 ## Data Preprocessing
 ●　欠損値処理  
-●　ダミー変数化
+●　ダミー変数化  
 ●　特徴量エンジニアリング
 
 ## Models
@@ -35,6 +35,11 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 ●　train-R² score(after implementing feature engineering)：0.9772    
 ●　test-R² score(after implementing feature engineering)：0.845
 
+⓷ XGBoost Regressor  
+（評価指標）  
+●　train-R² score(after implementing feature engineering)：0.9998  
+●　test-R² score(after implementing feature engineering)：0.8241  
+
 【実行内容】  
 ●　モデル比較  
 ●　特徴量エンジニアリングの追加
@@ -49,11 +54,12 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 |Linear Regression|0.46171|
 |Random Forest|0.15197|
 |Random Forest adding feature engineering|0.14645|
+|XGBoost Regressor|0.15166|
 
 ## Results
-Random Forest modelはLinear Regression modelよりも予測性能が高く、Kaggle Score 0.15197となった。
-さらに、feature engineering後はmodel性能の改善を認め、Kaggle Score 0.14645となった。
+Random Forest modelはLinear Regression modelよりも予測性能が高く、Kaggle Score 0.15197となり、feature engineering後はmodel性能の改善を認め、Kaggle Score 0.14645となった。  
+XGBoost Regressor modelはハイパーパラメータ未調整でkaggle Score 0.15166となり、Random Forest modelよりも予測性能が低い結果となった。
 
 ## Environment
-Python(pandas / scikit-learn / matplotlib)  
+Python(pandas / scikit-learn / matplotlib / xgboost)  
 Kaggle  
