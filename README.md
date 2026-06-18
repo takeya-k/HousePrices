@@ -39,8 +39,12 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 （評価指標）  
 ●　train-R² score(after implementing feature engineering)：0.9998  
 ●　test-R² score(after implementing feature engineering)：0.8241  
-●　train-R² score(after implementing feature engineering, max_depth2)：0.964  
-●　test-R² score(after implementing feature engineering, max_depth2)：0.9003  
+●　train-R² score(after implementing feature engineering, max_depth=2)：0.964  
+●　test-R² score(after implementing feature engineering, max_depth=2)：0.9003  
+●　train-R² score(after implementing feature engineering, max_depth=2, n_estimators=200)： 0.9803  
+●　test-R² score(after implementing feature engineering, max_depth=2, n_estimators=200)：0.9069  
+●　train-R² score(after implementing feature engineering, max_depth=2, n_estimators=200, learning_rate=0.1)：0.9575  
+●　test-R² score(after implementing feature engineering, max_depth=2, n_estimators=200, learning_rate=0.1)：0.911  
 
 【実行内容】  
 ●　モデル比較  
@@ -58,12 +62,13 @@ Kaggle House Pricesコンペティションにて、住宅/住宅関連情報か
 |Random Forest|0.15197|
 |Random Forest adding feature engineering|0.14645|
 |XGBoost Regressor|0.15166|
-|XGBoost Regressor with max_depth2|0.14415|
+|XGBoost Regressor with max_depth=2|0.14415|
+|XGBoost Regressor with max_depth=2, n_estimators=200|0.141|
+|XGBoost Regressor with max_depth=2, n_estimators=200, learning_rate=0.1|0.14274|
 
 ## Results
 Random Forest modelはLinear Regression modelよりも予測性能が高く、Kaggle Score 0.15197となり、feature engineering後はmodel性能の改善を認め、Kaggle Score 0.14645となった。  
-XGBoost Regressor modelはハイパーパラメータ未調整でKaggle Score 0.15166となり、Random Forest modelよりも予測性能が低い結果となった。  
-XGBoost Regressor modelのハイパーパラメータ調整後（max_depth2）はKaggle Score 0.14415となり、予測性能の向上を認めた。
+XGBoost Regressor modelはハイパーパラメータ未調整でKaggle Score 0.15166となり、Random Forest modelよりも予測性能が低い結果となった。しかし、XGBoost Regressor modelのハイパーパラメータ調整後は予測性能の向上を認め、max_depth=2、n_estimators=200によるハイパーパラメーター調整後はKaggle Score 0.141となり、本プロジェクトにおいて最も高い予測性能を示した。また、learning_rate=0.1による調整も試行したがKaggle scoreの改善は認めなかった。
 
 ## Environment
 Python(pandas / scikit-learn / matplotlib / xgboost)  
